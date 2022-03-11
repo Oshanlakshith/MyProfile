@@ -1,0 +1,125 @@
+<!--/**
+* @author : Sanu Vithanage
+* @since : 0.1.0
+**/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POS System</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/styles/style.css" rel="stylesheet">
+    <link href="../../assets/fonts/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+
+    #main {
+        background: url("assets/images/R.jpeg") no-repeat;
+        background-size: cover;
+        height: 100vh;
+        background-position: 50% 50%;
+        width: 100%;
+    }
+
+    .up {
+        font-size: 4rem;
+        font-weight: 700;
+        right: 0;
+        background-position: 50% 50%;
+        margin: auto;
+        position: absolute;
+        font-family: 'Abril Fatface', cursive;
+        top: 45px;
+    }
+
+    .down {
+        font-size: 4rem;
+        font-weight: 700;
+        right: 0;
+        background-position: 50% 50%;
+        margin: auto;
+        position: absolute;
+        font-family: 'Abril Fatface', cursive;
+        top: 110px;
+    }
+
+    h1 {
+        font-family: 'Great Vibes', cursive;
+    }
+</style>
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark shadow-lg">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse shadow-lg col-md-6" id="navbarTogglerDemo01">
+            <h1 class="navbar-brand text-success fw-bold">Pos System</h1>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" id="linkHome" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" id="linkCustomer" href="#">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" id="linkItem" href="#">Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" id="linkOrder" href="#">Order</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<section id="main">
+    <div class="container">
+        <div class="row py-4">
+            <div class="col-lg-7 text-center">
+                <h1 class="up text-success">Nature has always</h1>
+                <h1 class="down text-danger">Cared for Us!</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+
+        $("#linkCustomer").click(function () {
+            $("#customerContent").css("display", "block");
+            $("#main").css("display", "none");
+            $("#itemContent").css("display", "none");
+            $("#placeOrderPage").css("display", "none");
+        });
+
+        $("#linkItem").click(function () {
+            $("#itemContent").css("display", "block");
+            $("#customerContent").css("display", "none");
+            $("#main").css("display", "none");
+            $("#placeOrderPage").css("display", "none");
+        });
+        $("#linkOrder").click(function () {
+            $("#placeOrderPage").css("display", "block");
+            $("#main").css("display", "none");
+            $("#itemContent").css("display", "none");
+            $("#customerContent").css("display", "none");
+
+        });
+
+        $("#linkHome").click(function () {
+            $("#main").css("display", "block");
+            $("#itemContent").css("display", "none");
+            $("#customerContent").css("display", "none");
+            $("#placeOrderPage").css("display", "none");
+        });
+
+
+
+</script>
+</body>
+</html>

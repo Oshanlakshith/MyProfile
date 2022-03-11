@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/styles/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Order</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark shadow-lg">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse shadow-lg col-md-6" id="navbarTogglerDemo01">
+            <h1 class="navbar-brand text-success fw-bold">Pos System</h1>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" id="linkHome" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" id="linkCustomer" href="#">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" id="linkItem" href="#">Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" id="linkOrder" href="#">Order</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container-fluid flex-grow-1 flex-column" id="placeOrderPage"
+         style="background-color: #c8c8c8; display: none">
+        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+            <h1><i class="fas fa-cart-plus"></i> Place Order</h1>
+
+        </div>
+        <div class="row justify-content-around" style="height: max-content">
+            <div class="col-10 col-md-5 col-lg-3 p-3 mt-3" style="background-color: white">
+                <h3 class="text-center bg-success p-2 text-light">Customer</h3>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="orderId">Order ID</label>
+                        <input class="form-control border-dark" id="orderId" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="orderDate">Order Date</label>
+                        <input class="form-control border-dark" id="orderDate" type="date">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="selectcustomerId">Customer ID</label>
+                        <input class="form-control" id="selectcustomerId" type="text">
+
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="pocName">Customer Name</label>
+                        <input class="form-control border-dark" disabled id="pocName" type="text">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="pocaddress">Customer Address</label>
+                        <input class="form-control border-dark" disabled id="pocaddress" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="pocContact">Customer Contact</label>
+                        <input class="form-control border-dark" disabled id="pocContact" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="pocsalary">Customer Salary</label>
+                        <input class="form-control border-dark" disabled id="pocsalary" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 col-md-5 col-lg-5 p-3 mt-3" style="background-color: white">
+                <h3 class="text-center bg-success p-2 text-light">Items</h3>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="selectItemId">Item ID</label>
+                        <input class="form-control" id="selectItemId" type="text">
+                    </div>
+                    <div class="col-11 col-md-6 col-lg-4">
+                        <label class="fw-bold" for="poiName">Item Name</label>
+                        <input class="form-control border-dark" disabled id="poiName" type="text">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="poitemPrice">Unit Price</label>
+                        <input class="form-control border-dark" disabled id="poitemPrice" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="poqtyOnHand">Qty On Hand</label>
+                        <input class="form-control border-dark" id="poqtyOnHand" type="text">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <button class="btn btn-primary rounded-2" type="submit" id="btnAddCard">Add To Cart</button>
+                        <button class="btn btn-secondary rounded-2" type="submit">Clear</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-10 col-lg-3 p-3 mt-3 bg-light mt-1">
+                <h3 class="text-center bg-success p-2 text-light">Payment Details</h3>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="total">Total (Rs.)</label>
+                        <input class="form-control border-dark" disabled id="total" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="noOfItems">No Of Items</label>
+                        <input class="form-control border-dark" disabled id="noOfItems" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="cash">Cash (Rs.)</label>
+                        <input class="form-control border-dark" id="cash" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="balance">Balance (Rs.)</label>
+                        <input class="form-control border-dark" disabled id="balance" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-primary rounded-2 mt-2" type="submit" id="btnPlaceOrder">Place Order</button>
+                        <button class="btn btn-secondary rounded-2 mt-2" type="submit">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1 justify-content-around">
+            <div class="col-10 p-3 mt-3">
+                <h3 class="text-center bg-success p-2 text-light">Order Details</h3>
+                <div class="cartTbleDiv bg-light">
+                    <table class="table table-hover table-bordered">
+                        <thead class="bg-info">
+                        <tr>
+                            <th>Order Id</th>
+                            <th>Item Code</th>
+                            <th>Order Date</th>
+                            <th>Name</th>
+                            <th>Unit Price</th>
+                            <th>Qty On Hand</th>
+                            <th>Buy Qty</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody id="OrderTable">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+</body>
+</html>
