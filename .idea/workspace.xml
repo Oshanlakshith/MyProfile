@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e917f53e-6559-4a8a-8514-8993f896f8c3" name="Default Changelist" comment="css Framework" />
+    <list default="true" id="e917f53e-6559-4a8a-8514-8993f896f8c3" name="Default Changelist" comment=" css Framework and java Script" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +36,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646967774015</updated>
-      <workItem from="1646967776645" duration="1745000" />
+      <workItem from="1646967776645" duration="2184000" />
     </task>
     <task id="LOCAL-00001" summary="pos System s.p.a">
       <created>1646968122201</created>
@@ -59,7 +59,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646969705422</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=" css Framework and java Script">
+      <created>1646970005102</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1646970005102</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,6 +87,7 @@
     <MESSAGE value="pos System s.p.a" />
     <MESSAGE value="css Assignment" />
     <MESSAGE value="css Framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="css Framework" />
+    <MESSAGE value=" css Framework and java Script" />
+    <option name="LAST_COMMIT_MESSAGE" value=" css Framework and java Script" />
   </component>
 </project>
